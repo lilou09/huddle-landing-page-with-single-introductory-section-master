@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --violet: hsl(257, 40%, 49%);
+  --soft-magenta: hsl(300, 69%, 71%);
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--violet);
+  color: white;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 90%;
+  padding: 40px 0;
+  margin: 0 2rem;
+}
+
+.img_logo img {
+  width: 150px;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.text_side h1 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 3rem;
+}
+
+.text_side p {
+  margin: 20px 0;
+  line-height: 1.5;
+}
+
+button {
+  display: inline-block;
+  font-family: inherit;
+  border: none;
+  padding: 10px 50px;
+  border-radius: 25px;
+  background-color: white;
+  box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+  transition: 0.3s ease;
+  color: var(--violet);
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--soft-magenta);
+  color: white;
+}
+
+.icons {
+  text-align: right;
+}
+
+.main a,
+.icons a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+.icons a i {
+  position: relative;
+}
+
+.icons a:not(:first-child) {
+  margin-left: 1.5rem;
+}
+.icons a:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.icons a i::after {
+  content: "";
+  border: 2px solid white;
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  left: -14px;
+  bottom: -13px;
+}
+
+.icons a:hover {
+  color: var(--violet);
+}
+
+.icons a i:hover::after {
+  border-color: var(--violet);
+}
+
+footer .attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 30px;
+}
+.attribution a {
+  color: hsl(227, 35%, 16%);
+}
+
+@media only screen and (max-width: 1440px) {
+  .main img {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .icons {
+    text-align: center;
+    margin-top: 50px;
+  }
+  .text_side h1 {
+    font-size: 2rem;
+  }
+}
